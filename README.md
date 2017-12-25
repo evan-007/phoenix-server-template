@@ -22,3 +22,9 @@ The config file, `.chef/knife.rb` is a repository specific configuration file fo
 # Next Steps
 
 Read the README file in each of the subdirectories for more information about what goes in those directories.
+
+# Setup
+
+Install deps: `berks install`
+
+Add a node: `knife node create NAME` or edit `knife node edit NAME`
