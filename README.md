@@ -33,7 +33,9 @@ Add a node: `knife node create NAME` or edit `knife node edit NAME`.
 
 Generate a pw and add it to `data_bags/users/deploy`: `openssl passwd -1 "plaintextpassword"`
 
-Add `role[base_server]` to the run list.
+Add `role[base_server], recipe[users::sysadmins],role[postgres]` to the run list.
+
+Update `data_bags/users/deploy` w/password and ssh_key
 
 Bootstrap a node: `knife zero bootstrap SERVER_IP --ssh-user=root --node-name NAME`.
 

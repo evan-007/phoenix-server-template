@@ -1,0 +1,12 @@
+{
+  "name": "postgres",
+  "description": "postgres db server",
+  "default_attributes": {
+    "postgres": {
+      "version": "9.6.5"
+    }
+  },
+  "run_list": [
+    "recipe[postgresql::server]"
+  ]
+}
