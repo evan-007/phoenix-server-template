@@ -1,5 +1,7 @@
 # Overview
 
+Heavily inspiried by https://github.com/TalkingQuickly/rails-server-template
+
 Every Chef installation needs a Chef Repository. This is the place where cookbooks, roles, config files and other artifacts for managing systems with Chef will live. We strongly recommend storing this repository in a version control system such as Git and treat it like source code.
 
 While we prefer Git, and make this repository available via GitHub, you are welcome to download a tar or zip archive and use your favorite version control system to manage the code.
@@ -25,6 +27,16 @@ Read the README file in each of the subdirectories for more information about wh
 
 # Setup
 
-Install deps: `berks install`
+Install deps: `berks install`.
 
-Add a node: `knife node create NAME` or edit `knife node edit NAME`
+Add a node: `knife node create NAME` or edit `knife node edit NAME`.
+
+Generate a pw and add it to `data_bags/users/deploy`: `openssl passwd -1 "plaintextpassword"`
+
+Add `role[base_server]` to the run list.
+
+Bootstrap a node: `knife zero bootstrap SERVER_IP --ssh-user=root --node-name NAME`.
+
+Update a node: `knife zero converge 'name:NODE_NAME' --ssh-user root`
+
+Done!

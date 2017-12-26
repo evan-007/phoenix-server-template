@@ -1,0 +1,11 @@
+{
+  "id": "deploy",
+  "password": "generate_and_replace",
+  "ssh_keys": [
+    "rsa_public_key"
+  ],
+  "groups": [
+    "sysadmin"
+  ],
+  "shell": "/bin/bash"
+}

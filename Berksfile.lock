@@ -1,0 +1,11 @@
+DEPENDENCIES
+  apt
+  elixir
+    git: https://github.com/evan-007/elixir-cookbook
+    revision: a642e7152eeb91f6e8dff2f702dd77061ea55ba2
+  users (~> 5.3.1)
+
+GRAPH
+  apt (6.1.4)
+  elixir (0.1.0)
+  users (5.3.1)
